@@ -59,7 +59,7 @@ app.all('/authorize', function(req, res, next) {
           });
           res.json({
             success: true,
-            message: '请使用您的授权码',
+            message: '请使用您的授权码.',
             token: token
           });
         }
