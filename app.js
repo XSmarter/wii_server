@@ -11,7 +11,7 @@ var basic = require('./routes/utils/basic');
 var app = express();
 
 // 设置superSecret 全局参数
-app.set('superSecret', "myjwttokeninfo");
+app.set('superSecret', "wiijwttoken");
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -28,7 +28,6 @@ app.all("*", function (req, res, next) {
   res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
   res.header("X-Powered-By", ' 3.2.1');
   res.header("Content-Type", "application/json;charset=utf-8");
-  console.log(req.method);
   if(req.method === "OPTIONS"){
     res.send(200);
   }else{
